@@ -3,6 +3,7 @@ import { APIKIT_ERROR_TIPS, EVENT_CASE } from '@/constants';
 import { getSessionId } from '@/utils/cacheData';
 import { logUserBehavior } from '@/service';
 
+window.hwReaderApiKit = {}
 const errorMsg = '请在华为浏览器中打开';
 const jsbridge = {
   /**

@@ -5,7 +5,6 @@ import store from '@/store';
 
 import '@/js/fastclick.js';
 import '@/icons'; // icon
-import '@sentryjs';
 import App from './App.vue';
 import loading from '@/plugins/loading';
 

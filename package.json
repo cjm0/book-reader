@@ -14,7 +14,6 @@
     "analyze": "vue-cli-service build --mode analyze",
     "commit": "git-cz",
     "pre-commit": "lint-staged",
-    "postinstall": "node pre-build.js",
     "prepare": "node ./.husky/install.js",
     "inspect": "vue-cli-service inspect"
   },
@@ -33,11 +32,8 @@
     ]
   },
   "dependencies": {
-    "@hw-ads/ohos-ads": "^1.0.1",
-    "@sentry/vue": "^7.21.0",
     "axios": "^0.21.4",
     "crypto-js": "^4.2.0",
-    "ejs": "^3.1.9",
     "fastclick": "^1.0.6",
     "localforage": "^1.10.0",
     "md5": "^2.3.0",

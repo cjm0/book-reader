@@ -8,8 +8,6 @@ const ComponentsPlugin = require('unplugin-vue-components/webpack');
 
 const {
   NODE_ENV, BUILD_ENV,
-  VUE_APP_KIT, VUE_APP_KIT_DOMAIN,
-  VUE_APP_PPS, VUE_APP_PPS_DOMAIN,
   cdnUrl, port
 } = process.env;
 const isDev = NODE_ENV === 'development';
@@ -107,13 +105,6 @@ module.exports = {
     const mockFile = isDev ? 'js/mock_local' : 'js/mock_build'
     config.resolve.alias.set('@mock', `@/${mockFile}.js`)
 
-    // 开发、测试、预发包加 sentry 错误上报
-    let sentryFile = 'js/sentry'
-    if (!isDev && ['uat', 'test', 'pre'].includes(BUILD_ENV)) {
-      sentryFile = 'js/sentry_test'
-    }
-    config.resolve.alias.set('@sentryjs', `@/${sentryFile}.js`)
-
     // set svg-sprite-loader
     config.module.rule('svg').exclude.add(resolve('src/icons')).end();
 
@@ -128,15 +119,6 @@ module.exports = {
         symbolId: 'icon-[name]',
       })
       .end();
-
-    // 华为阅读器 kit 地址
-    config.plugin('html').tap((args) => {
-      args[0].VUE_APP_KIT = isDev ? VUE_APP_KIT : "<%= VUE_APP_KIT %>"
-      args[0].VUE_APP_KIT_DOMAIN = VUE_APP_KIT_DOMAIN
-      args[0].VUE_APP_PPS = VUE_APP_PPS
-      args[0].VUE_APP_PPS_DOMAIN = VUE_APP_PPS_DOMAIN
-      return args;
-    });
 
     config.when(!isDev, (config) => {
       config.plugin('html').tap((args) => {
