@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 加载本地字体渲染 Emoji 表情符号 */
+@font-face {
+  font-family: Emoji;
+  src: local('Apple Color Emojiji'), local('Segoe UI Emoji'), local('Segoe UI Symbol'), local('Noto Color Emoji');
+  unicode-range: U+1F000-1F644, U+203C-3299;
+}
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  overflow-y: hidden;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: system-ui, -apple-system, Segoe UI, Rototo, Emoji, Helvetica, Arial, sans-serif !important;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.body_scroll {
+  height: calc(100vh + 1px);
+  overflow-y: auto;
+}
+.body_hidden {
+  overflow-y: hidden;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+img {
+  vertical-align: middle;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: inherit;
+  border-color: #000;
+  border-radius: inherit;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  content: ' ';
+}
+
+button:active::before {
+  opacity: 0.1;
+}
+
+input,
+textarea,
+video {
+  -webkit-appearance: none;
+  appearance: none;
+  resize: none;
+}
+
+video:focus {
+  outline: none;
+}
+
+form {
+  margin: 0;
+}
+
+#toast {
+  position: fixed;
+  bottom: 64px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 8px 16px;
+  background: rgba(77, 77, 77, 0.95);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 500px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  z-index: 99999;
+  display: none;
+  animation: show 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+.ark_hw_toast {
+  bottom: 80px !important;
+  background: var(--color-toast-bg) !important;
+  color: var(--color-text-primary) !important;
+  box-shadow: var(--color-toast-shadow) !important;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

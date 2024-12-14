@@ -1,0 +1,10 @@
+.vt-list {
+  height: 100%;
+  overflow-y: auto;
+
+  .vt-item {
+    &:active {
+      background: var(--color-button-border);
+    }
+  }
+}

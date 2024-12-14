@@ -1,0 +1,90 @@
+.topbar {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  transition: transform 0.2s ease-in;
+  transform: translate3d(0, -100%, 0);
+  z-index: 200;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  @media screen and (min-width: 520px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .topbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .topbar_icon {
+      width: 24px;
+      height: 24px;
+      color: rgba(0, 0, 0, 0.9);
+    }
+    .topbar_icon_adrk{
+      color: rgba(255, 255, 255, 0.86);
+    }
+    .topbar_icon_disable {
+      opacity: 0.4;
+    }
+  }
+  .back{
+    padding-top: 1px;
+    width: 48px;
+    height: 48px;
+    &:active {
+      background: var(--color-button-line);
+      border-radius: 8px;
+    }
+  }
+  .back_hm{
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-button-border);
+    border-radius: 50%;
+    margin: 0 8px 0 12px;
+    color: var(--color-text-primary);
+  }
+  .add_book{
+    height: 48px;
+    padding: 0 12px;
+    color: var(--color-text-primary);
+    &:active {
+      background: var(--color-button-line);
+      border-radius: 8px;
+    }
+  }
+  .add_book_hm{
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-button-border);
+    border-radius: 50%;
+    margin: 0 12px 0 8px;
+    color: var(--color-text-primary);
+  }
+  .add_disable {
+    &:active {
+      background: transparent;
+      border-radius: 0;
+    }
+  }
+  .text{
+    color: var(--color-4);
+  }
+}
+
+
+.show {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s ease-out;
+}
+
+.no-anim {
+  transition: none;
+}

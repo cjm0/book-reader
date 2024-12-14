@@ -1,0 +1,59 @@
+.down_ad_index {
+	margin: 0 auto;
+	width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+	.tip_tit{
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.icon{
+			width: 16px;
+			height: 32px;
+		}
+		.span{
+			flex: 1;
+			font-weight: 700;
+			@include fontSize(20px);
+			@include lineHeight(32px);
+			@include text-ellipsis(1);
+			color: #AD7027;
+		}
+	}
+	.tip_desc{
+		margin-top: 8px;
+		@include fontSize(12px);
+		@include lineHeight(20px);
+		color: var(--color-4);
+	}
+
+	.ad_wrap {
+		position: relative;
+		width: 100%;
+		margin-top: 16px;
+		padding: 8px 16px;
+		border-radius: 24px;
+		border: 1px solid rgba(255, 246, 233, 0.8);
+		background-color: #F4E7D4;
+	}
+
+	.lock_text{
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 16px;
+		@include fontSize(14px);
+		color: #AD7027;
+	}
+}
+.down_ad_dark{
+	.ad_wrap{
+		border: 1px solid rgba(79, 74, 67, 0.8);
+		background: #3D3222;
+	}
+}

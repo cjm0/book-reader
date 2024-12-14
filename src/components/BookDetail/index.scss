@@ -1,0 +1,217 @@
+.book_detail_bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+}
+
+.book_detail {
+  width: 100%;
+  height: calc(100vh - 8px);
+  border-radius: 24px 24px 0px 0px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10001;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.25s ease-in;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  @include fontSize(12px);
+  @include lineHeight(16px);
+  color: var(--color-text-primary);
+
+  .book_top{
+    padding: 0 40px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .arrow {
+    display: flex;
+    justify-content: center;
+    .arrow_down {
+      width: 64px;
+      height: 24px;
+    }
+  }
+  .book_cover {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .name {
+      margin-top: 16px;
+      font-weight: 500;
+      @include fontSize(22px);
+      @include lineHeight(29px);
+    }
+    .author {
+      margin-top: 8px;
+      color: var(--color-text-disabled);
+    }
+  }
+
+  .book_wrap{
+    padding: 0 40px 20px;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .book_cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 400;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+
+    .detail_block {
+      .label1 {
+        height: 27px;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .num {
+        font-weight: 500;
+        @include fontSize(20px);
+        @include lineHeight(27px);
+      }
+      .txt {
+        margin: 8px 0 0 2px;
+      }
+      .label2 {
+        margin-top: 4px;
+        height: 12px;
+        display: flex;
+        @include lineHeight(16px);
+        justify-content: flex-start;
+        color: var(--color-text-disabled);
+      }
+      .label3 {
+        position: absolute;
+        margin-top: -12px;
+      }
+      .star {
+        width: 12px;
+        height: 12px;
+        color: var(--color-text-primary);
+      }
+      .null {
+        color: var(--color-slider-dot-bg);
+      }
+    }
+  }
+  .book_category {
+    margin-top: 20px;
+
+    .tag_tit {
+      font-weight: 500;
+      @include fontSize(18px);
+      @include lineHeight(24px);
+      color: var(--color-text-primary);
+    }
+    .tag_list {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+      .tag_name1 {
+        padding-right: 16px;
+        height: 16px;
+        font-weight: 500;
+        @include fontSize(14px);
+        border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+      }
+      .tag_name2 {
+        border-right: 0.5px solid rgba(255, 255, 255, 0.1);
+      }
+      .tag_coat {
+        margin: -6px 0 0 16px;
+        display: flex;
+        .tag {
+          margin: 0 4px;
+          padding: 6px 14px;
+          border-radius: 20px;
+          text-align: center;
+          color: var(--color-text-secondary);
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+  .intro_wrap {
+    flex: 1;
+    overflow: hidden;
+  }
+  .intro_box {
+    margin-top: 12px;
+    padding-bottom: 20px;
+    height: 100%;
+    min-height: 28px;
+    overflow-y: scroll;
+    font-weight: 400;
+    @include fontSize(16px);
+    @include lineHeight(28px);
+    word-break: break-all;
+    white-space: normal;
+    word-wrap: break-word;
+    color: var(--color-text-secondary);
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      border-radius: 4px;
+      background: var(--color-text-disabled);
+    }
+  }
+}
+
+.is_hm_ark {
+  @extend .book_detail;
+  border-radius: 32px 32px 0px 0px;
+  .book_top {
+    padding: 0 16px 16px;
+  }
+  .xmark {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    margin: 16px 0 8px;
+
+    .close-icon {
+      width: 40px;
+      height: 100%;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-button-border);
+      color: var(--color-text-primary);
+      .xmark-svg {
+        width: 18px;
+        height: 18px;
+        color: rgba(0, 0, 0, 0.9);
+      }
+      .xmark-svg-dark {
+        color: rgba(255, 255, 255, 0.86);
+      }
+    }
+  }
+  .book_cover {
+    margin-top: 0;
+  }
+}
+
+.show_pop {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.25s ease-out;
+}

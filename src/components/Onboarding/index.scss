@@ -1,0 +1,142 @@
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  position: relative;
+
+  .guide {
+    width: 100%;
+    height: calc(100vh - 112px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 20vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .guide1 {
+    width: 76px;
+    height: 163px;
+  }
+
+  .guide2 {
+    width: 96px;
+    height: 136px;
+    margin-top: 52px
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 44px;
+    bottom: 68px;
+    left: 0;
+    right: 0;
+    background-color: rgba(77, 77, 77, 0.95);
+    border-radius: 22px;
+    margin: 0 auto;
+    @include buttonWidth;
+  }
+
+  .desc {
+    width: 100vw;
+    min-width: 240px;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .desc-item {
+
+      width: 100%;
+      max-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      padding-top: 15vh;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        flex: 3;
+      }
+
+      &:nth-child(2) {
+        flex: 2;
+      }
+
+      .item-top {
+        font-size: 12px;
+      }
+
+      .item-middle {
+        font-size: 16px;
+        margin-top: 12px;
+      }
+
+      .item-bottom {
+        margin: 0 auto;
+        width: 40px;
+        margin-top: 62px;
+      }
+
+      .img-middle {
+        width: 76px;
+        margin-top: 33px;
+      }
+    }
+
+    .desc-middle {
+      border-left: 1px dashed rgba(255, 255, 255, 0.4);
+      border-right: 1px dashed rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mediaScreen('hw_mobile') {
+      width: 312px;
+    }
+
+    @include mediaScreen('hw_fold') {
+      width: 509px;
+    }
+
+    @include mediaScreen('hw_pad') {
+      width: 906px;
+    }
+  }
+
+  .lr-text {
+    width: 313px;
+  }
+
+  .lr-icon {
+    width: 284px;
+    margin-top: 30px;
+  }
+}

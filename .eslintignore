@@ -1,0 +1,5 @@
+dist
+.eslintrc.js
+src/assets
+src/js/global.js
+src/js/mock_local.js

@@ -1,0 +1,54 @@
+/* 默认值 light */
+:root {
+    --color-theme: #0A59F7;
+    --color-text-primary: rgba(0, 0, 0, 0.9);
+    --color-text-secondary: rgba(0, 0, 0, 0.6);
+    --color-text-disabled: rgba(0, 0, 0, 0.4);
+    --color-button-line: rgba(0, 0, 0, 0.1);
+    --color-button-border: rgba(0, 0, 0, 0.05);
+    --color-ad-bg: rgba(0, 0, 0, 0.03);
+    --color-downad-text: rgba(0, 0, 0, 0.78);
+    --color-toast-bg: rgba(255, 255, 255, 1);
+    --color-toast-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.4);
+    --color-addbookshelf-bg: rgba(255, 255, 255, 0.9);
+    --color-addbookshelf-filter: blur(80px) saturate(1.9) brightness(1);
+    --color-text-logintitle: rgba(0, 0, 0, 0.9);
+
+    --color-10: #000;
+    --color-9: rgba(0, 0, 0, 0.9);
+    --color-8: rgba(0, 0, 0, 0.8);
+    --color-7: rgba(0, 0, 0, 0.7);
+    --color-6: rgba(0, 0, 0, 0.6);
+    --color-5: rgba(0, 0, 0, 0.5);
+    --color-4: rgba(0, 0, 0, 0.4);
+    --color-3: rgba(0, 0, 0, 0.3);
+    --color-2: rgba(0, 0, 0, 0.2);
+    --color-1: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --color-theme: #5291FF;
+    --color-text-primary: rgba(255, 255, 255, 0.6);
+    --color-text-secondary: rgba(255, 255, 255, 0.55);
+    --color-text-disabled: rgba(255, 255, 255, 0.3);
+    --color-button-line: rgba(255, 255, 255, 0.15);
+    --color-button-border: rgba(255, 255, 255, 0.1);
+    --color-ad-bg: rgba(255, 255, 255, 0.1);
+    --color-downad-text: rgba(255, 255, 255, 0.78);
+    --color-toast-bg: rgba(46, 48, 51, 1);
+    --color-toast-shadow: 0px 10px 100px 0px rgba(255, 255, 255, .5);
+    --color-addbookshelf-bg: rgba(46, 48, 51, 0.9);
+    --color-addbookshelf-filter: blur(80px) saturate(1.5) brightness(1);
+    --color-text-logintitle: rgba(255, 255, 255, 0.86);
+
+    --color-10: #fff;
+    --color-9: rgba(255, 255, 255, 0.9);
+    --color-8: rgba(255, 255, 255, 0.8);
+    --color-7: rgba(255, 255, 255, 0.7);
+    --color-6: rgba(255, 255, 255, 0.6);
+    --color-5: rgba(255, 255, 255, 0.5);
+    --color-4: rgba(255, 255, 255, 0.4);
+    --color-3: rgba(255, 255, 255, 0.3);
+    --color-2: rgba(255, 255, 255, 0.2);
+    --color-1: rgba(255, 255, 255, 0.1);
+}

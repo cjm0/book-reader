@@ -1,0 +1,268 @@
+.horizontal {
+  padding: 8px 7px 0 12px;
+
+  .horizontal-title {
+    margin-bottom: 6px;
+    font-weight: 400;
+    line-height: 1.5;
+    @include fontSize(16px);
+    color: var(--color-text-primary);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include fontSize(12px);
+    color: var(--color-text-disabled);
+  }
+
+  .left {
+    .ad-tag-bottom {
+      margin-left: 14px;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    .button {
+      color: var(--color-theme);
+      font-weight: 500;
+    }
+
+    .close {
+      width: 16px;
+      height: 16px;
+      margin-left: 12px;
+      margin-right: 7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .popup-img {
+        width: 16px;
+        height: 16px;
+        color: var(--color-3);
+      }
+    }
+  }
+}
+
+.vertical-img {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 10px;
+    overflow: hidden;
+
+    .app-name {
+      font-weight: 500;
+      @include fontSize(16px);
+      @include lineHeight(21px);
+      @include text-ellipsis(1);
+      color: #fff;
+    }
+
+    .app-desc {
+      font-weight: 400;
+      @include fontSize(12px);
+      @include lineHeight(16px);
+      @include text-ellipsis(1);
+      color: rgba($color: #fff, $alpha: 0.6);
+    }
+  }
+
+  .button-horizontal-sm {
+    margin-left: 8px;
+    width: 72px;
+    height: 28px;
+    border-radius: 28px;
+    background: rgba($color: #fff, $alpha: 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn-text {
+      color: #fff;
+      @include fontSize(12px);
+    }
+  }
+
+  .downloading-sm {
+    position: relative;
+    outline: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+
+    .progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-text {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .disabled {
+    opacity: 0.4;
+  }
+}
+
+.vertical-info {
+  position: absolute;
+  width: 100%;
+  bottom: 16px;
+  left: 0;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  .ad-source {
+    line-height: 1.33;
+    @include fontSize(12px);
+    color: rgba($color: #fff, $alpha: 0.6);
+  }
+
+  .ad-title {
+    margin-top: 6px;
+    color: #fff;
+    line-height: 1.5;
+    @include fontSize(16px);
+    font-weight: 500;
+  }
+}
+
+.vertical-video {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  .app-name {
+    font-weight: 400;
+    @include fontSize(12px);
+    @include lineHeight(16px);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .app-desc {
+    font-weight: 500;
+    @include fontSize(16px);
+    @include lineHeight(21px);
+    text-align: justify;
+    color: #E5E5E5;
+    margin-top: 6px;
+  }
+}
+
+.button-horizontal {
+  margin-top: 16px;
+  height: 40px;
+  border-radius: 40px;
+  background: #317af7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &:active {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+
+  .btn-text {
+    font-weight: 500;
+    @include fontSize(16px);
+    @include lineHeight(21px);
+    color: #fff;
+  }
+}
+
+.downloading {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  outline: 1px solid rgba(0, 108, 222, 0.2);
+  overflow: hidden;
+
+  .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-theme);
+    opacity: 0.4;
+  }
+
+  .btn-text {
+    display: table;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.ad-tag-top-sound {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 17px;
+  right: 66px;
+}
+
+.ad-tag-top {
+  width: 42px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}

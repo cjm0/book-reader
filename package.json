@@ -1,0 +1,84 @@
+{
+  "name": "hwb_reader",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --mode dev",
+    "build": "vue-cli-service build",
+    "build:uat": "vue-cli-service build --mode uat",
+    "build:test": "vue-cli-service build --mode test",
+    "build:pre": "vue-cli-service build --mode pre",
+    "build:prod": "vue-cli-service build --mode prod",
+    "server": "node index.js",
+    "lint": "vue-cli-service lint",
+    "analyze": "vue-cli-service build --mode analyze",
+    "commit": "git-cz",
+    "pre-commit": "lint-staged",
+    "postinstall": "node pre-build.js",
+    "prepare": "node ./.husky/install.js",
+    "inspect": "vue-cli-service inspect"
+  },
+  "nodeAgent": {
+    "main": "index.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@hw-ads/ohos-ads": "^1.0.1",
+    "@sentry/vue": "^7.21.0",
+    "axios": "^0.21.4",
+    "crypto-js": "^4.2.0",
+    "ejs": "^3.1.9",
+    "fastclick": "^1.0.6",
+    "localforage": "^1.10.0",
+    "md5": "^2.3.0",
+    "vant": "^2.12.39",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.2",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@koa/router": "9.4.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~5.0.0-beta.7",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.3",
+    "commitizen": "^4.2.4",
+    "core-js": "^3.6.5",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^7.0.2",
+    "intersection-observer-polyfill": "^0.1.0",
+    "koa": "2.11.0",
+    "koa-static": "^5.0.0",
+    "lint-staged": "^11.1.2",
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.53.0",
+    "sass-loader": "12.3.0",
+    "svg-sprite-loader": "^6.0.9",
+    "terser-webpack-plugin": "^5.3.6",
+    "unplugin-vue-components": "0.22.11",
+    "unplugin": "1.7.1",
+    "vconsole-webpack-plugin": "^1.7.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "5.76.0",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "workbox-cli": "^6.5.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 years"
+  ]
+}

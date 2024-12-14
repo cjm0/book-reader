@@ -1,0 +1,313 @@
+.bookinfo_index {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 32px 16px;
+  border-radius: 4px;
+  word-break: break-all;
+  @include fontSize(12px);
+  @include lineHeight(16px);
+  color: var(--color-text-primary);
+
+  .topbox_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .book_top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 52px 0 16px;
+    .name {
+      margin-top: 16px;
+      font-weight: 500;
+      @include fontSize(22px);
+      @include lineHeight(29px);
+    }
+    .author {
+      margin-top: 8px;
+      color: var(--color-text-disabled);
+    }
+  }
+  .book_top_bg{
+    opacity: 0;
+    padding: 52px 16px 16px;
+    border: 1px solid var(--color-ad-bg);
+  }
+  .book_feiye_img1{
+    max-width: 328px;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn .6s .1s ease-in-out forwards;
+  }
+  .book_feiye_img2{
+    margin-left: 88px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: -1;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn .6s .1s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .bg_box {
+    position: relative;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+
+    .book_border {
+      width: 28px;
+      height: 28px;
+      border-radius: 28px;
+      position: absolute;
+      border: 1px solid var(--color-ad-bg);
+
+      &:nth-child(1) {
+        left: -14px;
+        top: -14px;
+      }
+      &:nth-child(2) {
+        right: -14px;
+        top: -14px;
+      }
+      &:nth-child(3) {
+        left: -14px;
+        bottom: -14px;
+      }
+      &:nth-child(4) {
+        right: -14.5px;
+        bottom: -14px;
+      }
+    }
+
+    .bg_inner {
+      border: 1px solid var(--color-ad-bg);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+
+      .book_detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 17px;
+        padding: 20px 0 23px;
+        text-align: center;
+        font-weight: 400;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+
+        .detail_block {
+          .label1 {
+            height: 27px;
+            display: flex;
+            justify-content: flex-start;
+          }
+          .num {
+            font-weight: 500;
+            @include fontSize(20px);
+            @include lineHeight(27px);
+          }
+          .txt {
+            margin: 8px 0 0 2px;
+          }
+          .label2 {
+            margin-top: 4px;
+            height: 12px;
+            display: flex;
+            @include lineHeight(16px);
+            justify-content: flex-start;
+            color: var(--color-text-disabled);
+          }
+          .label3 {
+            position: absolute;
+            margin-top: -12px;
+          }
+          .star {
+            width: 12px;
+            height: 12px;
+            color: var(--color-text-primary);
+          }
+          .null {
+            color: var(--color-slider-dot-bg);
+          }
+        }
+      }
+
+      .book_content {
+        margin-top: 20px;
+
+        .content {
+          font-weight: 500;
+          padding-left: 24px;
+          @include fontSize(18px);
+          @include lineHeight(24px);
+          color: var(--color-text-primary);
+        }
+        .tagList {
+          margin: 14px 20px 0 24px;
+          display: flex;
+          flex-direction: row;
+          white-space: nowrap;
+          .tagName1 {
+            height: 16px;
+            padding-right: 16px;
+            font-weight: 500;
+            @include fontSize(14px);
+            border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+          }
+          .tagName2 {
+            border-right: 0.5px solid rgba(255, 255, 255, 0.1);
+          }
+          .tagCoat {
+            margin: -6px 0 0 16px;
+            display: flex;
+            .tag {
+              margin: 0 4px;
+              padding: 6px 14px;
+              border-radius: 20px;
+              text-align: center;
+              color: var(--color-text-secondary);
+              background-color: #f5f5f5;
+            }
+          }
+        }
+      }
+
+      .intro_box {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+
+        .mask {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 16px;
+        }
+      }
+
+      .intro_wrap {
+        position: relative;
+        min-height: 28px;
+        margin: 12px 12px 0;
+        padding: 0 12px;
+        justify-content: center;
+        overflow-y: scroll;
+        font-weight: 400;
+        @include fontSize(16px);
+        @include lineHeight(28px);
+        word-break: break-all;
+        white-space: normal;
+        word-wrap: break-word;
+        color: var(--color-text-secondary);
+
+        .intro_text {
+          padding-bottom: 20px;
+        }
+
+        &::-webkit-scrollbar {
+          width: 4px;
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          width: 4px;
+          border-radius: 4px;
+          background: var(--color-text-disabled);
+        }
+
+      }
+
+      .page_mode {
+        margin: 37px 0 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        font-weight: 500;
+        @include fontSize(16px);
+        @include lineHeight(21px);
+        color: var(--color-text-primary);
+        .mode {
+          margin: 0 10px;
+        }
+        .mode_up {
+          margin: 0 10px 2px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+    .icon {
+      width: 5px;
+      height: 8px;
+    }
+  }
+
+  .image {
+    height: 16px;
+    width: 16px;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+  div ::-webkit-scrollbar:vertical {
+    width: 4px;
+
+  }
+  ::-webkit-scrollbar-track {
+    width: 10px;
+    border-radius: 16px;
+  }
+}
+
+.bookinfo_index_small{
+  .book_top {
+    padding: 48px 0 16px;
+    .name {
+      margin-top: 8px;
+    }
+  }
+
+  .bg_box{
+    .bg_inner{
+      .page_mode{
+        margin: 8px 0 40px;
+      }
+    }
+  }
+}

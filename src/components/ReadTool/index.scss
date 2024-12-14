@@ -1,0 +1,75 @@
+.tools {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 200;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.2s ease-in;
+
+  .item {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-primary);
+    &:active {
+      border-radius: 8px;
+      background: var(--color-button-line);
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 3px;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+  .is_hm_ark {
+    @extend .item;
+    &:active {
+      border-radius: inherit;
+      background: inherit;
+    }
+  }
+
+  .active {
+    color: var(--color-text-primary);
+  }
+}
+
+.show {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s ease-out;
+}
+.no-anim {
+  transition: none
+}
+
+.source_wrap{
+  position: fixed;
+  z-index: 6;
+  height: 64px;
+  max-width: 312px;
+  overflow: hidden;
+  .source_img{
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.source_fade-enter-active, .source_fade-leave-active {
+  transition: opacity .2s;
+}
+.source_fade-enter, .source_fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
