@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="NPM Downloads" src="https://img.shields.io/npm/d18m/book-reader">
   <img alt="NPM Version" src="https://img.shields.io/npm/v/book-reader">
-  <img alt="NPM language" src="https://img.shields.io/badge/language-js-orange.svg">
+  <img alt="NPM language" src="https://img.shields.io/badge/language-vue2-orange.svg">
   <a href="https://github.com/cjm0/book-reader/blob/main/LICENSE"><img alt="NPM License" src="https://img.shields.io/npm/l/book-reader"></a>
   <a href="https://cjm0.github.io/blog/page/list/"><img alt="个人博客" src="https://img.shields.io/badge/blog-@前端一锅煮-blue.svg"></a>
   <a href="https://www.zhihu.com/people/qian-duan-yiguo-zhu"><img alt="知乎" src="https://img.shields.io/badge/知乎-@前端一锅煮-blue.svg"></a>
