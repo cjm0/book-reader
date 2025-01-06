@@ -1,4 +1,13 @@
-# hwb_reader
+<p align="center">
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/d18m/reader-layout">
+  <img alt="NPM Version" src="https://img.shields.io/npm/v/reader-layout">
+  <img alt="NPM language" src="https://img.shields.io/badge/language-js-orange.svg">
+  <a href="https://github.com/cjm0/reader-layout/blob/main/LICENSE"><img alt="NPM License" src="https://img.shields.io/npm/l/reader-layout"></a>
+  <a href="https://cjm0.github.io/blog/page/list/"><img alt="个人博客" src="https://img.shields.io/badge/blog-@前端一锅煮-blue.svg"></a>
+  <a href="https://www.zhihu.com/people/qian-duan-yiguo-zhu"><img alt="知乎" src="https://img.shields.io/badge/知乎-@前端一锅煮-blue.svg"></a>
+</p>
+
+# book-reader
 
 vue2 vue-cli 构建的 h5 阅读器项目，支持横翻、竖翻阅读模式
 
@@ -48,7 +57,7 @@ vue2 vue-cli 构建的 h5 阅读器项目，支持横翻、竖翻阅读模式
   - 预发环境：https://prehwb-reader.yuewen.com
   - 正式环境：https://hwb-reader.yuewen.com
 
-## 前端各期需求
+## 各期需求
 
 看 CHANGELOG.md 文件
 
@@ -62,7 +71,7 @@ vue2 vue-cli 构建的 h5 阅读器项目，支持横翻、竖翻阅读模式
 - quadrant 通过 url 匹配到的 amis 广告配置组件（A、B、C、D 等）
 - chapterId 外部传入的章节 id：跳指定章节
 - readerVersion=v1 走灰度环境代码
-- hwbid 书籍 id-华为
+- hwbid 书籍 id-客户端传入
 
 2. params
 - cbid 书籍 id
@@ -78,9 +87,6 @@ vue2 vue-cli 构建的 h5 阅读器项目，支持横翻、竖翻阅读模式
 - vant ^2.12.39
 - webpack 5.76.0
 - eslint ^6.7.2
-
-2. 说明
-- userInfo.userId => X-HW-HBID-HASH: fb4bb0043b08581feccf922d5d549ac2924de903044eeafeac7b67ddc5d48c25
 
 ## Git 提交规范
 

@@ -226,7 +226,7 @@ const px2vw = (px) => {
 // 常用浏览器 UA判断
 const getUA = () => {
   const ua = window.navigator.userAgent.toLowerCase();
-  const testUa = regexp => regexp.test(ua);
+  const testUa = (regexp) => regexp.test(ua);
 
   // const isAndroid = testUa(/android|adr/g);
   const isIOS = testUa(/ios|iphone|ipad|ipod|iwatch/g);
@@ -237,7 +237,6 @@ const getUA = () => {
 
   const isHwb = testUa(/harmony/g);
   // const inPPSEnv = isHwb && testUa(/gdttangrammobsdk/g);
-  // TODO: 本地开发设置为true，模拟鸿蒙单框机
   const isHmArk = isHwb && testUa(/arkweb/g);
   // const isHmArk = true;
   return {

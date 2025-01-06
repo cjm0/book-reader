@@ -707,7 +707,6 @@ export default {
     // 广告
     isFreeAd() { // 是否阅文配置按章节免广
       if (this.freeAdConfig > 0 && this.chapter && this.chapter.cid <= this.freeAdConfig) {
-        // TODO: 测试公告页广告，上线改为 => return true
         return true;
       }
       return false

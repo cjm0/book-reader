@@ -107,7 +107,6 @@ export default {
       if (this.isHmArk) {
         jsbridge.call('onFontChanged', (data) => {
           console.log('fontChangeCB', data);
-          // TODO: 字体大小变化后，重新加载页面
           window.location.reload();
         });
       }
